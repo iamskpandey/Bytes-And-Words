@@ -175,18 +175,6 @@ const Homepage = () => {
             />
           );
         })}
-
-        <p style={stylesbtn}>
-          <Link
-            to="/category"
-            style={{
-              color: "white",
-              textDecoration: "none",
-            }}
-          >
-            View All
-          </Link>
-        </p>
       </div>
       <div className={styles.catPostCardContainer}>
         {catClicked

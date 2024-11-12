@@ -6,7 +6,6 @@ import { Signup } from "./components/auth/Signup";
 import Createpage from "./components/create/Createpage";
 import Blogpage from "./components/blog/Blogpage";
 import Dashboard from "./components/dashboard/Dashboard";
-import CategoriesSearch from "./components/homepage/CategoriesSearch";
 import Protected from "./components/Protected";
 import Editpage from "./components/edit/Editpage";
 
@@ -45,17 +44,13 @@ function App() {
       ),
     },
     {
-      path: "/category",
-      element: <CategoriesSearch />,
-    },
-    {
-      path:"/edit/:blogId",
-      element:(
+      path: "/edit/:blogId",
+      element: (
         <Protected>
           <Editpage />
         </Protected>
-      )
-    }
+      ),
+    },
   ]);
   return <RouterProvider router={router} />;
 }

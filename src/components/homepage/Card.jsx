@@ -17,7 +17,7 @@ const Card = ({ post, handleClick }) => {
         <img
           className={styles.cardImg}
           src={post.image}
-          height={200}
+          height={180}
           alt={post.title || "Post Image"}
         />
       ) : (
