@@ -2,6 +2,8 @@ import React from "react";
 import { Link } from "react-router-dom";
 import style from "./Login.module.css";
 import { useNavigate } from "react-router-dom";
+import signinimg from "../../assets/auth/signinimg.png";
+
 import { signInWithEmailAndPassword } from "firebase/auth";
 import { auth } from "../../firebase";
 import { useAuthState } from "react-firebase-hooks/auth";
@@ -68,11 +70,7 @@ export const Login = () => {
             </button>
           </div>
           <div className={style.imgContainer}>
-            <img
-              className={style.backimg}
-              src="src\assets\auth\image.png"
-              alt="pencils"
-            />
+            <img src={signinimg} className={style.backimg} alt="pencils" />
           </div>
         </div>
 

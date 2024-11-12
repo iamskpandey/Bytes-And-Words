@@ -4,6 +4,7 @@ import style from "./Login.module.css";
 import { createUserWithEmailAndPassword } from "firebase/auth";
 import { auth } from "../../firebase";
 import { useNavigate } from "react-router-dom";
+import signupimg from "../../assets/auth/signup.png";
 
 export const Signup = () => {
   const [formData, setFormData] = useState({
@@ -65,7 +66,7 @@ export const Signup = () => {
           <div className={style.imgContainer}>
             <img
               className={style.backimg}
-              src="src\assets\auth\signup.png"
+              src={signupimg}
               alt="signup Image"
             />
           </div>

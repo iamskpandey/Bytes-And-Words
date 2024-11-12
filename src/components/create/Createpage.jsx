@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import Navbarcreate from "./Navbarcreate";
 import { db } from "../../firebase";
 import { collection, addDoc, getDocs } from "firebase/firestore";
+import createimg from "../../assets/img/image.png";
 
 const Createpage = () => {
   const [blog, setBlog] = useState({
@@ -147,7 +148,7 @@ const Createpage = () => {
           required
         />
         <img
-          src={blog.image == "" ? "src\\assets\\img\\image.png" : blog.image}
+          src={blog.image == "" ? { createimg } : blog.image}
           alt="Blog Cover"
           style={{
             width: "100%",

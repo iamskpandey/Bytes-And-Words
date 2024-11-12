@@ -6,6 +6,7 @@ import { useAuthState } from "react-firebase-hooks/auth";
 import { auth } from "../../firebase";
 import Spinner from "../common/Spinner";
 import { useParams } from "react-router-dom";
+import imagepng from "../../assets/img/image.png";
 
 const Editpage = () => {
   const [blog, setBlog] = useState({
@@ -187,7 +188,7 @@ const Editpage = () => {
         />
 
         <img
-          src={blog.image == "" ? "src\\assets\\img\\image.png" : blog.image}
+          src={blog.image == "" ? {imagepng} : blog.image}
           alt="Blog Cover"
           style={{
             width: "100%",

@@ -1,6 +1,8 @@
 import React from "react";
 import styles from "./Pcard.module.css";
 import { formatDate } from "../../utils/Datechanger";
+import clockpng from "../../assets/icons/clock.png";
+import heartpng from "../../assets/icons/heart.png";
 
 const Pcard = ({pPost, handleClick}) => {
   const date = formatDate(pPost.timestamp);
@@ -15,11 +17,11 @@ const Pcard = ({pPost, handleClick}) => {
         <div className={styles.row}>
           <p>{date}</p>
           <div className={styles.pairs}>
-            <img src="src\assets\icons\clock.png" alt="clock" />
+            <img src={clockpng} alt="clock" />
             <p>{pPost.timeToReadInMinutes} min</p>
           </div>
           <div className={styles.pairs}>
-            <img src="src\assets\icons\heart.png" alt="Likes" />
+            <img src={heartpng} alt="Likes" />
             <p>{pPost.likes}</p>
           </div>
         </div>

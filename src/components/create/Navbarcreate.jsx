@@ -2,6 +2,9 @@ import React from "react";
 import style from "./Navbarcreate.module.css";
 import { useNavigate } from "react-router-dom";
 import handleLogout from "../common/Logout";
+import dashpng from "../../assets/icons/dash.png";
+import accpng from "../../assets/icons/acc.png";
+import logoutpng from "../../assets/icons/logout.png";
 
 const Navbarcreate = () => {
   const navigate = useNavigate();
@@ -13,13 +16,13 @@ const Navbarcreate = () => {
         </p>
         <div className={style.headImg}>
           <img
-            src="src\assets\icons\dash.png"
+            src={dashpng}
             alt="create"
             onClick={() => navigate("/dashboard")}
           />
-          <img src="src\assets\icons\acc.png" alt="Account" />
+          <img src={accpng} alt="Account" />
           <img
-            src="src\assets\icons\logout.png"
+            src={logoutpng}
             alt="Logout"
             onClick={handleLogout}
           />

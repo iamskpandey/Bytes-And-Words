@@ -4,6 +4,10 @@ import { formatDate } from "../../utils/Datechanger";
 import { db } from "../../firebase"; 
 import { query, where, doc, deleteDoc, getDocs,collection } from "firebase/firestore";
 import { useNavigate } from "react-router-dom";
+import clockpng from "../../assets/icons/clock.png";
+import heartpng from "../../assets/icons/heart.png";
+import deletepng from "../../assets/icons/delete.png";
+import editpng from "../../assets/icons/edit.png";
 
 const Pubcard = ({ post }) => {
   post.timestamp = formatDate(post.timestamp);
@@ -46,11 +50,11 @@ const Pubcard = ({ post }) => {
           <div className={styles.row}>
             <p>{post.timestamp}</p>
             <div className={styles.pairs}>
-              <img src="src\assets\icons\clock.png" alt="clock" />
+              <img src={clockpng} alt="clock" />
               <p>{post.timeToReadInMinutes} min</p>
             </div>
             <div className={styles.pairs}>
-              <img src="src\assets\icons\heart.png" alt="Likes" />
+              <img src={heartpng} alt="Likes" />
               <p>{post.likes}</p>
             </div>
           </div>
@@ -59,11 +63,11 @@ const Pubcard = ({ post }) => {
 
       <div className={styles.someBtn}>
         <img
-          src="src\assets\icons\delete.png"
+          src={deletepng}
           alt="Delete"
           onClick={()=>handleDelete(post.id)}
         />
-        <img src="src\assets\icons\edit.png" alt="Edit" onClick={handleEdit} />
+        <img src={editpng} alt="Edit" onClick={handleEdit} />
       </div>
     </div>
   );

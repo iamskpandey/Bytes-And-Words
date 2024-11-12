@@ -1,6 +1,8 @@
 import React from "react";
 import styles from "./Card.module.css";
 import { formatDate } from "../../utils/Datechanger";
+import clockpng from "../../assets/icons/clock.png";
+import heartpng from "../../assets/icons/heart.png";
 
 const Card = ({ post, handleClick }) => {
   if (!post) {
@@ -31,7 +33,7 @@ const Card = ({ post, handleClick }) => {
         <div className={styles.row}>
           <p>{publishedDate || "Unknown Date"}</p>
           <div className={styles.pairs}>
-            <img src="src/assets/icons/clock.png" alt="clock" />
+            <img src={clockpng} alt="clock" />
             <p>
               {post.timeToReadInMinutes
                 ? `${post.timeToReadInMinutes} min`
@@ -39,7 +41,7 @@ const Card = ({ post, handleClick }) => {
             </p>
           </div>
           <div className={styles.pairs}>
-            <img src="src/assets/icons/heart.png" alt="Likes" />
+            <img src={heartpng} alt="Likes" />
             <p>{post.likes || 0}</p>
           </div>
         </div>
