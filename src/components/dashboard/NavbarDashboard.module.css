@@ -1,0 +1,42 @@
+.heading {
+  width: 100%;
+  height: min-content;
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.heading p {
+  font-size: 1.5rem;
+  font-weight: 600;
+  padding-bottom: 2px;
+  border-bottom: 4px solid black;
+}
+
+.heading:hover p {
+  cursor: pointer;
+}
+
+.heading button {
+  font-size: 1rem;
+  font-weight: 600;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-right: 1rem;
+}
+
+.headImg{
+  display: flex;
+  gap: 2rem;
+}
+
+.headImg img{
+  width: 3rem;
+  height: 3rem;
+}
+
+.headImg img:hover{
+  cursor: pointer;
+}

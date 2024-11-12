@@ -1,0 +1,31 @@
+.footerContainer {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    margin-top: 7rem;
+}
+
+.footerContainer h1 {
+    color: #655555;
+    opacity: .59;
+    font-size: 1.5rem;
+    font-size: 5rem;
+}
+
+.footerContainer h3 {
+    color: #655555;
+    font-size: 1.5rem;
+    font-weight: bolder;
+    font-size: 2rem;
+}
+
+.imgRow {
+    margin-bottom: 2rem;
+}
+
+.footerContainer p {
+    color: #655555;
+    font-weight: bolder;
+}

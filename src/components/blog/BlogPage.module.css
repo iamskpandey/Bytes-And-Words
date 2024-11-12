@@ -1,0 +1,145 @@
+.mainContainer {
+  margin: 4rem 10rem;
+}
+
+.heading {
+  font-size: 2.6rem;
+  font-weight: bold;
+}
+
+.subheading {
+  color: #707070;
+}
+
+.metadata {
+  display: flex;
+  justify-content: space-between;
+  margin: 1rem 0rem;
+}
+
+.metadata div {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.metadata div img {
+  width: 1.2rem;
+  height: 1.2rem;
+}
+
+.coverImage {
+  width: 100%;
+  height: 30rem;
+  object-fit: cover;
+  margin: 1rem 0rem;
+  border-radius: 16px;
+}
+
+.content {
+  margin: 1rem 0rem;
+  font-size: 1.2rem;
+  line-height: 1.8rem;
+  white-space: -moz-pre-wrap; 
+  white-space: -pre-wrap; 
+  white-space: -o-pre-wrap; 
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+
+.content span {
+  font-size: 4rem;
+  margin-right: 0.3rem;
+}
+
+.actionBtn img {
+  width: 2rem;
+  height: 2rem;
+  cursor: pointer;
+  margin-right: 1rem;
+  margin-top: 1rem;
+}
+
+.actionBtn img:hover {
+  transform: scale(1.3);
+  transition: transform 0.3s ease-in-out;
+}
+
+.actionBtn img {
+  transition: transform 0.3s ease-in-out;
+}
+
+.commentSection {
+  padding: 3rem 0rem;
+  margin-top: 2rem;
+  background-color: #e1e1e1;
+}
+
+.bodyComment {
+  margin-inline: 10rem;
+}
+
+.cmtHeading {
+  display: flex;
+  align-items: center;
+}
+
+.cmtHeading img {
+  width: 2rem;
+  height: 2rem;
+  margin-right: 1rem;
+}
+
+.cmtHeading p {
+  font-size: 1.6rem;
+  font-weight: bold;
+}
+
+.cmtBox {
+  margin-top: 1rem;
+  display: flex;
+  gap: 1rem;
+}
+
+.cmtBox input {
+  width: 100%;
+  padding: 1rem;
+  border: none;
+  border-radius: 8px;
+  outline: none;
+  font-size: 1rem;
+}
+
+.cmtBox img {
+  width: 4rem;
+  height: 4rem;
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out;
+}
+
+.cmtBox img:hover {
+  transform: translateX(0.5rem);
+  transition: transform 0.3s ease-in-out;
+}
+
+.comment {
+  margin: 0.6rem 10rem;
+  background-color: darkgrey;
+  color: white;
+  padding: 1rem;
+  font-size: 1rem;
+  font-weight: semi-bold;
+  border-radius: 8px;
+  max-width: 75%;
+}
+
+.user {
+  font-size: 1rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.usercmt {
+  font-size: 0.9rem;
+  margin-bottom: 0.5rem;
+}
