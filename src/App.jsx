@@ -4,7 +4,7 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import { Login } from "./components/auth/Login";
 import { Signup } from "./components/auth/Signup";
 import Createpage from "./components/create/Createpage";
-import Blogpage from "./components/blog/BlogPage";
+import Blogpage from "./components/blog/Blogpage";
 import Dashboard from "./components/dashboard/Dashboard";
 import CategoriesSearch from "./components/homepage/CategoriesSearch";
 import Protected from "./components/Protected";
