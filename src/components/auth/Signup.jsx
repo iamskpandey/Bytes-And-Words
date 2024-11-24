@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import style from "./Login.module.css";
-import { createUserWithEmailAndPassword } from "firebase/auth";
+import { createUserWithEmailAndPassword, sendEmailVerification } from "firebase/auth";
 import { auth } from "../../firebase";
 import { useNavigate } from "react-router-dom";
 import signupimg from "../../assets/auth/signup.png";
@@ -22,12 +22,13 @@ export const Signup = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      await createUserWithEmailAndPassword(
+      const userCred = await createUserWithEmailAndPassword(
         auth,
         formData.email,
         formData.password
       );
-      alert("User created! Login to continue");
+      await sendEmailVerification(userCred.user)
+      alert("Verify Your Email! Check your email");
       navigate("/login");
     } catch (error) {
       console.error("Error signing in/up:", error);

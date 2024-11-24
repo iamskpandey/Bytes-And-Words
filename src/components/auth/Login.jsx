@@ -26,7 +26,16 @@ export const Login = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      await signInWithEmailAndPassword(auth, formData.email, formData.password);
+      const userCred = await signInWithEmailAndPassword(auth, formData.email, formData.password);
+      const currentUser = userCred.user;
+      const creationTime = currentUser.metadata.creationTime;
+      const currentTime = new Date().getTime();
+      const isNewUser = currentTime - new Date(creationTime).getTime() < 1000 * 60 * 60 * 24;
+
+      if (isNewUser && !userCred.user.emailVerified) {
+        alert("Please verify your email before logging in.");
+        return;
+      }
       const querySnapshot = await getDocs(collection(db, "admins"));
       querySnapshot.forEach((doc) => {
         if (doc.data().email === formData.email) {

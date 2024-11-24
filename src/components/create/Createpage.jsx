@@ -148,7 +148,7 @@ const Createpage = () => {
           required
         />
         <img
-          src={blog.image == "" ? { createimg } : blog.image}
+          src={blog.image == "" ? createimg : blog.image}
           alt="Blog Cover"
           style={{
             width: "100%",
